@@ -60,7 +60,7 @@ func GenCode(format string, cha int) string { //9,15,35
 	section := strings.Split(FMT, "-")
 	for _, v := range section {
 		for i := 0; i < len(v); i++ {
-			d := (getRandom(0, CHA+1))
+			d := (GetRandom(0, CHA+1))
 			b := alphabet[d : d+1]
 			//fmt.Println(b)
 			c += b
