@@ -2,11 +2,8 @@ package gutils
 import (
     "math/rand"
     "time"
-    "strings"
-    "strconv"
     "crypto/md5"
     "encoding/hex"
-    "io"
 )
 
 func getTimeNow() string{
