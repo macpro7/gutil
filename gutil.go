@@ -4,6 +4,8 @@ import (
     "time"
     "crypto/md5"
     "encoding/hex"
+    "strings"
+    "fmt"
 )
 
 func getTimeNow() string{
