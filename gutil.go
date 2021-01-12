@@ -8,12 +8,12 @@ import (
     "fmt"
 )
 
-func getTimeNow() string{
+func GetTimeNow() string{
    var timeLayout = "2006-01-02 15:04:05.0000" 
     a:=time.Now().Format(timeLayout)
     return a
 }
-func getNowDateTime(pat string)string{
+func GetNowDateTime(pat string)string{
     timer := time.Now()
     var timeLayout = "2006-01-02 15:04:05"
     switch(pat){
@@ -25,13 +25,13 @@ func getNowDateTime(pat string)string{
     default: return timer.Format(timeLayout);
     }
 }
-func s2md5(str string) string  {
+func S2md5(str string) string  {
     h := md5.New()
     h.Write([]byte(str))
     return hex.EncodeToString(h.Sum(nil))
 }
 
-func s2md5V2(str string) string {
+func S2md5V2(str string) string {
     data := []byte(str)
     has := md5.Sum(data)
     md5str := fmt.Sprintf("%x", has)
@@ -40,12 +40,12 @@ func s2md5V2(str string) string {
 
 
 
-func getRandom(MIN int, MAX int) int {
+func GetRandom(MIN int, MAX int) int {
 	rand1 := rand.New(rand.NewSource(time.Now().UnixNano()))
 	return MIN + rand1.Intn(MAX-MIN)
 }
 
-func genCode(format string, cha int) string { //9,15,35
+func GenCode(format string, cha int) string { //9,15,35
 	alphabet := "1234567890abcdefghijklmnopqrstuvwxyz"
 	FMT := "XXXXX-XXXXX-XXXXX"
 	CHA := 15
